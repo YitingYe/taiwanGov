@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0026)https://www.taiwan.gov.tw/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript" src="./Taiwan.gov.tw_files/NRJS-04043b3218f403551ca"></script><script src="./Taiwan.gov.tw_files/nr-1184.min.js"></script><script type="text/javascript" async="" src="./Taiwan.gov.tw_files/f.txt"></script><script async="" src="./Taiwan.gov.tw_files/analytics.js"></script><script async="" src="./Taiwan.gov.tw_files/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-04043b3218f403551ca",applicationID:"565123585"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<meta name="title" content="Taiwan.gov.tw">
+<link rel="Shortcut Icon" type="image/x-icon" href="https://www.taiwan.gov.tw/xslGip/egov2015/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Welcome to the Official Portal Website of the Republic of China, Taiwan. Discover all the government&#39;s online information and services here.">
+<meta name="keywords" content="Taiwan, Government, Portal website, agencies, Ministry of Foreign Affairs, Republic of China ">
+<meta name="apple-mobile-web-app-title" content="taiwan.gov">
+<meta name="application-name" content="taiwan.gov">
+<meta property="og:title" content="Taiwan.gov.tw">
+<meta property="og:site_name" content="Government Portal of the Republic of China (Taiwan)">
+<meta property="og:url" content="https://www.taiwan.gov.tw/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.taiwan.gov.tw/xslGip/egov2015/img/TaiwanGovLogo.png">
+<meta property="og:description" content="Welcome to the Official Portal Website of the Republic of China, Taiwan. Discover all the government&#39;s online information and services here.">
+<meta property="og:locale" content="en_US">
+<meta property="og:published" content="December 19, 2020, 3:15 pm">
+<meta name="DC.Title" content="Taiwan.gov.tw">
+<meta name="DC.Subject" content="Taiwan, Government, portal, agencies, government offices">
+<meta name="DC.Creator" content="Ministry of Foreign Affairs">
+<meta name="DC.Description" content="Welcome to the Official Portal Website of the Republic of China, Taiwan. Discover all the government&#39;s online information and services here.">
+<meta name="DC.Publisher" content="Ministry of Foreign Affairs">
+<meta name="DC.Contributor" content="Ministry of Foreign Affairs">
+<meta name="DC.Date" content="2020/12/19">
+<meta name="DC.Type" content="text">
+<meta name="DC.Format" content="text/html">
+<meta name="DC.Identifier" content="A03000000B">
+<!-- <meta name="DC.Relation" content="MP-1"> -->
+<meta name="DC.Source" content="Ministry of Foreign Affairs">
+<meta name="DC.Language" content="en">
+<meta name="DC.Coverage" content="">
+<meta name="DC.Rights" content="Ministry of Foreign Affairs">
+
+
+<title>Taiwan.gov.tw</title>
+<link type="text/css" rel="stylesheet" href="./Taiwan.gov.tw_files/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="./Taiwan.gov.tw_files/style.css">
+<link type="text/css" rel="stylesheet" media="screen" href="./Taiwan.gov.tw_files/supersized.css">
+<!---->
+
+
+<!--[if lte IE 9]><script type="text/javascript" src="xslGip/egov2015/js/html5shiv.js"></script><script type="text/javascript" src="xslGip/egov2015/js/respond.min.js"></script><![endif]-->
+ 
+<link type="text/css" rel="stylesheet" href="./Taiwan.gov.tw_files/new_style_1.css">
+ 
+<!-- Global site tag (gtag.js) - Google Ads: 780172229 --> <script async="" src="./Taiwan.gov.tw_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'AW-780172229');
+</script>
+<script>
+  gtag('event', 'page_view', {
+    'send_to': 'AW-780172229',
+    'user_id': 'replace with value'
+  });
+</script>
+
+ 
+<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+
+
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script> 
+<script src="./Taiwan.gov.tw_files/f(1).txt"></script><script src="./Taiwan.gov.tw_files/f(2).txt"></script></head>
+<body>
+
+<a id="skiplink-container" href="https://www.taiwan.gov.tw/#hypAccesskeyC" class="skiplink">Skip to main content</a>
+<header class="Header">
+<a accesskey="u" href="https://www.taiwan.gov.tw/#" class="accesskey u" title="Alt+U:Top Menu">:::</a>
+<div class="container">
+	<div class="row">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="top: 50px;" role="navigation">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span class="sr-only">導覽列開關</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+			
+			<a class="navbar-brand" href="https://www.taiwan.gov.tw/index.php" role="banner"><img alt="Taiwan.gov.tw" src="./Taiwan.gov.tw_files/logo.png" title="info-tainwan LOGO"></a>
+
+<div class="my-sm-hide web-site-top-link"> 
+    <a href="http://www.gov.tw/" target="_blank">中文</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="https://www.taiwan.gov.tw/sitemap.php">Sitemap</a>
+	<!--&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="./3818.php">Useful Links</a>
+	&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="./content5.php?p=27&c=43">Resources</a> -->
+</div>
+
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+<ul class="nav navbar-nav">
+<li><a href="https://www.taiwan.gov.tw/news.php">NEWS</a></li>
+<li style="width:90px"><a href="https://www.taiwan.gov.tw/about.php">ABOUT TAIWAN</a></li>
+<li><a href="https://www.taiwan.gov.tw/content_3.php">HISTORY</a></li>
+<li><a href="https://www.taiwan.gov.tw/politics.php">POLITICS / DIPLOMACY</a></li>
+<li><a href="https://www.taiwan.gov.tw/content_7.php">ECONOMY</a></li>
+<li style="width:120px"><a href="https://www.taiwan.gov.tw/content_8.php">SCIENCE / TECHNOLOGY</a></li>
+<li style="width:120px"><a href="https://www.taiwan.gov.tw/education.php">EDUCATION / CULTURE</a></li>
+<li><a href="https://www.taiwan.gov.tw/content_11.php">MASS MEDIA</a></li>
+</ul>
+</div></nav></div>
+</div></header>
+ 
+<section id="Content" class="Content fix-ori-home-page-margin-top">
+	<!--<div style="color: #f00;margin-bottom: 10px;margin-top: -40px;">
+		System Announcement<br>
+		Please kindly be advised that, due to scheduled maintenance, this website will be temporarily closed from 18:30 today (December 15), and is expected to resume operation by December 17. We apologize for any inconvenience it may cause. Thank you very much for your attention and consideration.
+	</div>-->
+	<div style="overflow: hidden;">
+		<div class="col-lg-6 col-md-6 my-small-padding">
+			<a id="hypAccesskeyC" href="https://www.taiwan.gov.tw/#" accesskey="c" title="Alt + C:Content Area">&nbsp;&nbsp;&nbsp;</a><br>
+		</div>
+		<div class="col-lg-6 col-md-6 my-small-padding my-margin-bottom-20"> 
+			
+<section class="search" role="search">
+				<span class="welcome">
+					 
+					<label for="keyword" style="color:#ffffff" role="searchbox">Welcome!</label>
+ 				</span>
+				<form name="fseach" action="https://www.taiwan.gov.tw/3869.php" method="POST">
+					<div class="input-group">
+						<input type="hidden" name="authenticity_token" value="">
+						
+						<input name="keyword" id="keyword" type="text" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn glyphicon glyphicon-search" type="button" onclick="javascript:fsend();" style="height: 37px;  background-repeat: no-repeat;  width: 37px;  background-image: url(images/serch-btn.png);" title="submit"></button>
+						</span>
+					</div>
+				</form>
+				<script type="text/javascript">
+					function fsend()
+					{
+						if(document.fseach.keyword.value =='')
+						{
+							document.fseach.keyword.focus();
+							alert("Please input keyword!!");
+						}
+						else{					
+							document.fseach.submit();
+						}
+					}
+				</script>
+				 <noscript>Your browser does not support JavaScript!</noscript>
+			</section>
+					</div>
+	</div>
+	<div class="my-sm-hide role="main">
+		<div class="col-lg-8 my-small-padding my-margin-bottom-10">
+			<a href="https://taiwantoday.tw/news.php?unit=6&amp;post=191120&amp;unitname=Politics-Top-News&amp;postname=Taiwan%2C-EU-stage-32nd-economic-consultation" style="display: block;" target="_BLANK" title="另開新視窗" aria-label="News">
+								<div class="bk_img_base_set" style="background-image:url(https://image.taiwantoday.tw/images/content/img20201218153055499_800.jpg);height: 218px;" title="Taiwan, EU stage 32nd economic consultation[open another page]">
+									<div class="home_block_cover">
+						<h1 class="cover_title">
+							News
+						</h1>
+						<div class="cover_date">
+							December 18, 2020						</div>
+						<div class="cover_content">
+							Taiwan, EU stage 32nd economic consultation						</div>
+						<div class="cover_content">
+							The 32nd annual Taiwan-EU economic and trade consultation concluded Dec. 16 via videoconference, spotlighting government efforts to deepen reciprocal investment and cooperation in areas of mutual interest, according to the Ministry of Economic Affairs.						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<!--
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.youtube.com/watch?v=pN9TU41gROc&feature=youtu.be" target="_new" title="A Perfect Pair">
+				<img class="my-full-width" src="/images/banner_LNB.jpg" title="A Perfect Pair" alt="A Perfect Pair[open another page]">
+			</a>
+		</div>-->
+		
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+						<a href="https://api.taiwantoday.tw/public/api_banner_count.php?uid=F02020CpP07nZK03JegC&amp;bid=4" style="display: block;" target="_new" title="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+				<div class="bk_img_base_set" style="background-image:url(&#39;https://image.taiwantoday.tw/images/publicbanner/img20200703144829235.jpg&#39;);height: 218px;" title="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+					
+					<div class="home_block_cover" style="background-color:rgba(0,0,0,0);">
+						<div class="cover_title">
+													</div>
+						<div class="cover_content">
+							 
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<!--
+			<div id="carousel" class="slide carousel carousel-fade" data-ride="carousel" data-interval="5000">
+				<div class="carousel-inner">
+				 
+				 <div class="item active">					   
+					<a href="https://api.taiwantoday.tw/public/api_banner_count.php?uid=F02020CpP07nZK03JegC&bid=4" style="display: block;" target="_new" title="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+						<div class="bk_img_base_set" style="background-image:url('/images/https://image.taiwantoday.tw/images/publicbanner/img20200703144829235.jpg');height: 218px;" title="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+						</div>
+					</a> 
+				 </div>
+				 
+				 <div class="item">
+				  <a href="http://www.mgt.org.tw/en/" style="display: block;" target="_new" title="Mandarin On-the-Go in Taiwan[open another page]">
+					<div class="bk_img_base_set" style="background-image:url('/images/info1.jpg');height: 218px;" title="Mandarin On-the-Go in Taiwan[open another page]">
+					</div>
+				   </a> 
+				 </div>
+  
+				 <div class="item">
+					<a href="http://np.cpami.gov.tw/home-en.html" style="display: block;" target="_new" title="Taiwan National Park[open another page]">
+						<div class="bk_img_base_set" style="background-image:url('/images/info2.jpg');height: 218px;" title="Taiwan National Park[open another page]">
+						</div>
+					</a> 
+				 </div>
+
+				 
+				</div>
+			</div>
+			 -->
+			
+			
+			
+		</div>
+				<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.taiwan.gov.tw/content_11.php" style="display: block;" aria-label="MASS MEDIA">
+				<div class="bk_img_base_set" style="background-image:url(./images/content/img20191127082551533.jpg);height: 206px;" title="MASS MEDIA">
+					
+					<div class="home_block_cover">
+						<div class="cover_title">
+							MASS MEDIA						</div>
+						<div class="cover_content">
+							The diversity of Taiwan’s media is reflected in the plethora of outlets and intense competition within the industry. The nation’s press operates in a media environment that is one of the freest in Asia.						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.taiwan.gov.tw/content_6.php" style="display: block;" aria-label="CROSS-STRAIT RELATIONS">
+				<div class="bk_img_base_set" style="background-image:url(./images/content/img20191127082414335.jpg);height: 206px;" title="CROSS-STRAIT RELATIONS">
+					
+					<div class="home_block_cover">
+						<div class="cover_title">
+							CROSS-STRAIT RELATIONS						</div>
+						<div class="cover_content">
+							Since the government relocated to Taiwan in 1949, it has exercised jurisdiction over Taiwan proper, Penghu Islands, Kinmen Islands, Matsu Islands and a number of smaller islands, while China has been under the control of the authorities in Beijing. Beginning with...						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.taiwan.gov.tw/content_3.php" style="display: block;">
+				<div class="bk_img_base_set" style="background-image:url(./images/content/img20191127082322539.jpg);height: 206px;" title="HISTORY">
+					
+					<div class="home_block_cover">
+						<div class="cover_title">
+							HISTORY						</div>
+						<div class="cover_content">
+							The ROC was founded in 1912 in China. At that time, Taiwan was under Japanese colonial rule as a result of the 1895 Treaty of Shimonoseki, by which the Qing ceded Taiwan to Japan.The ROC government began exercising jurisdiction over Taiwan in 1945 after Japan surrendered at...						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="col-lg-6 my-small-padding my-margin-bottom-10">
+			<a href="https://www.mofa.gov.tw/en/theme.aspx?n=B13D460AE0B33449&amp;s=9C13959F19F93B2F&amp;sms=BCDE19B435833080" style="display: block;" target="_blank">
+				<div class="bk_img_base_set" style="background-image:url(https://www.mofa.gov.tw/Upload/RelPic/1967/80/800x308%E7%96%AB%E6%83%85%E5%B0%88%E5%8D%80_ok_e.jpg);height: 206px;">
+				</div>
+			</a>
+		</div>
+
+		<div class="col-lg-6 my-small-padding my-margin-bottom-10" style="margin-bottom: 70px;">
+			<a href="https://www.mofa.gov.tw/en/theme.aspx?n=635352E3900FFF8E&amp;s=8A33013523400F35&amp;sms=BCDE19B435833080" style="display: block;" target="_blank">
+				<div class="bk_img_base_set" style="background-image:url(https://www.mofa.gov.tw/Upload/RelPic/1967/77/800x308%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8B%80%E7%97%85%E6%AF%9203e.jpg);height: 206px;background-position: right top;">
+				</div>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="my-lg-hide">
+		<div class="col-lg-8 my-small-padding my-margin-bottom-10">
+			<a href="https://taiwantoday.tw/news.php?unit=6&amp;post=191120&amp;unitname=Politics-Top-News&amp;postname=Taiwan%2C-EU-stage-32nd-economic-consultation" class="has_cover_content">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/img20201218153055499_800.jpg" title="Taiwan, EU stage 32nd economic consultation[open another page]" alt="Taiwan, EU stage 32nd economic consultation[open another page]">
+				<div class="home_block_cover">
+					<div class="cover_title">
+						News
+					</div>
+					<div class="cover_date">
+						December 18, 2020					</div>
+					<div class="cover_content">
+						Taiwan, EU stage 32nd economic consultation					</div>
+					<div class="cover_content">
+						The 32nd annual Taiwan-EU economic and trade consultation concluded Dec. 16 via videoconference, spotlighting government efforts to deepen reciprocal investment and cooperation in areas of mutual interest, according to the Ministry of Economic Affairs.					</div>
+				</div>
+			</a>
+		</div>
+		 
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			
+			 
+			<a href="https://api.taiwantoday.tw/public/api_banner_count.php?uid=F02020CpP07nZK03JegC&amp;bid=4" class="has_cover_content" target="_new" title="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/img20200703144829235.jpg" title="Provide a one-stop service to foreigners who want to find out more about the study tours." alt="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+				<div class="home_block_cover" style="background-color:rgba(0,0,0,0);">
+					<div class="cover_title">
+											</div>
+					<div class="cover_content">
+						 
+					</div>
+				</div>
+			</a>
+			 
+
+
+
+
+			 <!--<div id="carousel" class="slide carousel carousel-fade" data-ride="carousel" data-interval="5000">
+				<div class="carousel-inner">				  
+				  
+
+				  <div class="item active">			  
+
+					<a href="https://api.taiwantoday.tw/public/api_banner_count.php?uid=F02020CpP07nZK03JegC&bid=4" target="_new" title="Provide a one-stop service to foreigners who want to find out more about the study tours.">
+						<img class="my-full-width" title="Provide a one-stop service to foreigners who want to find out more about the study tours."  alt="Provide a one-stop service to foreigners who want to find out more about the study tours." src="./images/https://image.taiwantoday.tw/images/publicbanner/img20200703144829235.jpg">
+					</a>
+
+				 </div>
+				 
+				
+				 
+				 <div class="item">				  
+
+					<a href="http://www.mgt.org.tw/en/" target="_new" title="Mandarin On-the-Go in Taiwan[open another page]">
+						<img class="my-full-width" title="Mandarin On-the-Go in Taiwan[open another page]"  alt="Mandarin On-the-Go in Taiwan[open another page]" src="./images/info1.jpg">
+					</a>
+
+				 </div>
+
+
+				 <div class="item">
+				  
+
+					<a href="http://np.cpami.gov.tw/home-en.html" target="_new" title="Taiwan National Park[open another page]">
+						<img class="my-full-width" title="Taiwan National Park[open another page]"  alt="Taiwan National Park[open another page]" src="./images/info2.jpg">
+					</a>
+
+
+				 </div>
+
+				 
+				</div>
+			  </div>-->
+
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.taiwan.gov.tw/content_11.php" class="has_cover_content">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/img20191127082551533.jpg" title="MASS MEDIA" alt="MASS MEDIA">
+				<div class="home_block_cover">
+					<div class="cover_title">
+						MASS MEDIA					</div>
+					<div class="cover_content">
+						The diversity of Taiwan’s media is reflected in the plethora of outlets and intense competition within the industry. The nation’s press operates in a media environment that is one of the freest in Asia.	
+
+Taiwan was ranked the top Asian nation for the sixth consecutive year in the 2018 World Press Freedom Index released April 25 by France-based Reporters Without Borders (RSF). In the survey of 180 countries and territories, Taiwan jumped three places to 42nd, one ahead of South Korea, with Japan, 67th; Hong Kong, 70th; Singapore, 151st; and China, 176th. Norway, Sweden and the Netherlands topped the index, in that order.					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.taiwan.gov.tw/content_6.php" class="has_cover_content">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/img20191127082414335.jpg" title="CROSS-STRAIT RELATIONS" alt="CROSS-STRAIT RELATIONS">
+				<div class="home_block_cover">
+					<div class="cover_title">
+						CROSS-STRAIT RELATIONS					</div>
+					<div class="cover_content">
+						Since the government relocated to Taiwan in 1949, it has exercised jurisdiction over Taiwan proper, Penghu Islands, Kinmen Islands, Matsu Islands and a number of smaller islands, while China has been under the control of the authorities in Beijing. Beginning with the acceleration of Taiwan’s democratization in the late 1980s, many restrictions concerning civil exchanges with China have been lifted. Today, Taiwan is one of the biggest investors in China. In 2017, the value of cross-strait bilateral trade was US$139 billion. In that year, travelers from China made nearly 2.7 million visits to Taiwan, up from 329,204 in 2008.					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.taiwan.gov.tw/content_3.php" class="has_cover_content">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/img20191127082322539.jpg" title="HISTORY" alt="HISTORY">
+				<div class="home_block_cover">
+					<div class="cover_title">
+						HISTORY					</div>
+					<div class="cover_content">
+						The ROC was founded in 1912 in China. At that time, Taiwan was under Japanese colonial rule as a result of the 1895 Treaty of Shimonoseki, by which the Qing ceded Taiwan to Japan.The ROC government began exercising jurisdiction over Taiwan in 1945 after Japan surrendered at the end of World War II.					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.mofa.gov.tw/en/theme.aspx?n=B13D460AE0B33449&amp;s=9C13959F19F93B2F&amp;sms=BCDE19B435833080" class="has_cover_content" target="_blank">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/800x308疫情專區_ok_e.jpg" title="The Taiwan Model for Combating COVID-19" alt="The Taiwan Model for Combating COVID-19">
+			</a>
+		</div>
+		<div class="col-lg-4 my-small-padding my-margin-bottom-10">
+			<a href="https://www.mofa.gov.tw/en/theme.aspx?n=635352E3900FFF8E&amp;s=8A33013523400F35&amp;sms=BCDE19B435833080" class="has_cover_content" target="_blank">
+				<img class="my-full-width" src="./Taiwan.gov.tw_files/800x308新型冠狀病毒03e.jpg" title="Coronavirus disease (COVID-19) outbreak" alt="Coronavirus disease (COVID-19) outbreak">
+			</a>
+		</div>
+	</div>
+	<!-- first one -->
+<div class="taipei101 N" id="slidecaption"></div>
+</section>
+<footer class="page-footer" role="contentinfo">
+<div class="googleArea" id="googleArea" style="display:none;" align="left">
+<h2>Translate</h2>
+<div id="google_translate_element"></div>
+<p>Translation powered by Google Translator. MOFA is not responsible for inaccurate translation.</p>
+</div>
+
+<div class="footer">
+	<ul class="disclaimer">
+		<li>
+		<a accesskey="b" href="https://www.taiwan.gov.tw/#" class="accesskey b" title="Alt+B:Bottom Area">:::</a>
+		<a href="http://www.gov.tw/" target="_blank" title="link to myE-gov website[open another page]">中文</a></li>
+		<li><a href="https://www.taiwan.gov.tw/3818.php">Useful Links</a></li>
+		<li><a href="https://www.taiwan.gov.tw/content5.php?p=27&amp;c=43">Resources</a></li>
+
+		<!--
+		<li class="footer2"><a href="javascript:;">Related Sites</a></li>
+		<li class="footer3"><a href="javascript:;">Site Map</a></li>
+		-->
+	</ul>
+	<ul class="Calendar">
+		<li class="Date" id="infoDate">Dec <span>19</span></li>
+		<li class="Time" id="infoTime">Taiwan<span>03:15</span>PM</li>
+	</ul>
+	<a title="Ministry of Foreign Affairs, Republic of China (Taiwan)" class="logo" href="http://www.mofa.gov.tw/en/default.html" target="_blank"><img alt="link to Ministry of Foreign Affairs, Republic of China (Taiwan)[open another page]" title="link to Ministry of Foreign Affairs, Republic of China (Taiwan)[open another page]" src="./Taiwan.gov.tw_files/561519545053.png"></a> 
+	<p>Copyright © 2020 Ministry of Foreign Affairs, Republic of China (Taiwan)</p>
+	<div class="facebook">
+	<a target="_blank" href="https://www.youtube.com/channel/UC4yFGrMYnnRusraegYMIauw">
+		<img src="./Taiwan.gov.tw_files/581417132271.png" alt="Youtube" title="link to Youtube[open another page]" width="26">
+	</a>
+
+		
+	</div>
+	<a href="https://accessibility.ncc.gov.tw/Applications/Detail?category=20180807162204" title="www.handicap-free.nat.gov.tw[open another page]" target="_blank">
+    <img src="./Taiwan.gov.tw_files/e556a365-33fc-40e3-8d8f-94e2cd96288d-2.jpg" border="0" width="105" height="37" alt="pass AA level of accessibility web page detection[open another page]">
+    </a> 
+</div>
+
+ 
+<script type="text/javascript">
+
+
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+
+
+
+
+
+var dt = new Date();
+			var Month="June 28, 2016 ".substring(0,3);
+
+			Month=monthNames[dt.getMonth()].substring(0,3);
+
+			
+			var PMAM="AM";
+			var hour = dt.getHours();
+			if(hour >= 12)
+			{
+				PMAM="PM";
+				hour=hour-12;
+			}
+			
+			var Minutes = dt.getMinutes();
+			document.getElementById("infoDate").innerHTML=Month+" <span>" + dt.getDate() + "</span>";
+			document.getElementById("infoTime").innerHTML="Taiwan<span>" + right('0'+hour,2) + ":" + right('0'+Minutes,2) + "</span>" + PMAM;
+			
+			 function right(str, num)
+			{
+				return str.substring(str.length-num,str.length)
+			}
+		</script></footer>
+<script type="text/javascript" src="./Taiwan.gov.tw_files/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="./Taiwan.gov.tw_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="./Taiwan.gov.tw_files/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./Taiwan.gov.tw_files/supersized.3.2.7.min.js"></script>
+<script type="text/javascript" src="./Taiwan.gov.tw_files/supersized.shutter.min.js"></script>
+<script type="text/javascript" src="./Taiwan.gov.tw_files/owl.carousel.js"></script>
+<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-1472270-24', 'auto');
+			ga('send', 'pageview');
+		</script>
+		
+		<script type="text/javascript">
+		//top menu
+		$(function(){
+			$(window).load(function(){
+				$(window).bind('scroll resize', function(){
+					var $this = $(this);
+					var $this_Top=$this.scrollTop();
+					
+					//當高度小於100時，關閉區塊	
+					if($this_Top > 130){
+						$('.navbar-fixed-top').stop().animate({top:"0px"},100);
+						}
+					if($this_Top < 130){
+						$('.navbar-fixed-top').stop().animate({top:"50px"},100);
+					}
+				}).scroll();
+			});
+		});
+		//背景圖
+		jQuery(function($){
+	
+			$.supersized({
+			
+				// Functionality
+				slide_interval          :   10000,	// Length between transitions
+				transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+				transition_speed		:	700,		// Speed of transition
+														   
+				// Components							
+				slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+				slides 					:  	[			// Slideshow Images
+				{image : './Taiwan.gov.tw_files/img20181119190959385.jpg', title : ''},				//{image : 'img_bp/img20160628141750456.jpg', title : 'Photo by Harry Huang'},
+				//{image : 'img_bp/img20160628141839534.jpg', title : 'Photo by Yeh Jui-tsung'},
+				//{image : 'img_bp/img20160628141912612.jpg', title : 'Photo by Harry Huang'},
+				//{image : 'img_bp/img20160628141935564.jpg', title : ''},
+			
+													
+												
+											]
+			});
+		});
+
+		//$(function() {
+	
+			//$('.bannerzone').jCarouselLite({
+				//btnNext: ".bannerNext",
+				//btnPrev: ".bannerPrev",
+				//btnStop: ".bannerStop",
+				//auto: 5000,
+				//speed: 200,
+				//visible: 3,
+				//circular: true,
+				//scroll: 1
+			//});
+
+		//});
+
+		$(function(){
+			$('.footer .disclaimer .footer1').click(function(){
+				if($('#bannerzone').is(':visible')){ $('#bannerzone').slideToggle();}
+				if($('#Sitemap').is(':visible')){ $('#Sitemap').slideToggle();}
+				$('#googleArea').slideToggle();
+			});
+			$('.footer .disclaimer .footer2').click(function(){
+				if($('#googleArea').is(':visible')){ $('#googleArea').slideToggle();}
+				if($('#Sitemap').is(':visible')){ $('#Sitemap').slideToggle();}
+				$('#bannerzone').slideToggle();
+			});
+			$('.footer .disclaimer .footer3').click(function(){
+				if($('#googleArea').is(':visible')){ $('#googleArea').slideToggle();}
+				if($('#bannerzone').is(':visible')){ $('#bannerzone').slideToggle();}
+				$('#Sitemap').slideToggle();
+			});
+		});
+		//廣告輪播圖
+		$(document).ready(function() {
+			$("#owl-demo").owlCarousel({
+				items : 3,
+				lazyLoad : true,
+				navigation : true
+			}); 
+		});
+		//轉換日期
+		function getDatestr(str)
+		{
+			 
+			var temp;
+			switch (str.getMonth())
+			{
+				case '1': temp='January ';
+				break;
+				case '2': temp='February ';
+				break;
+				case '3': temp='March ';
+				break;
+				case '4': temp='April ';
+				break;
+				case '5': temp='May ';
+				break;
+				case '6': temp='June ';
+				break;
+				case '7': temp='July ';
+				break;
+				case '8': temp='August ';
+				break;
+				case '9': temp='September ';
+				break;
+				case '10': temp='October ';
+				break;
+				case '11': temp='November ';
+				break;
+				case '12': temp='December ';
+				break;
+			}
+			temp+=str.getDate() + ', ' + str.getFullYear
+			return temp;
+		}
+		</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1472270-24', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"NRJS-04043b3218f403551ca","applicationID":"565123585","transactionName":"YwADYhZXXUAEBk0NWFpKNEQNGVpdAQBBSkdcFQ==","queueTime":0,"applicationTime":227,"atts":"T0cAFF5NTk4=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+
+<ul id="supersized" class="quality" style="visibility: visible;"><li class="slide-0 activeslide"><a target="_blank"><img src="./Taiwan.gov.tw_files/img20181119190959385.jpg" style="width: 1279px; height: 856.93px; left: 0px; top: -124px;"></a></li></ul><span style="border-radius: 10px !important; text-indent: 12px !important; width: auto !important; height: 20px !important; padding: 0px 8px !important; text-align: center !important; vertical-align: middle !important; font: bold 11px / 20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNFNjAwMjMiPjwvY2lyY2xlPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNkMwIDguNTYxNSAxLjYwNTUgMTAuNzQ4NSAzLjg2NSAxMS42MDlDMy44MSAxMS4xNDA1IDMuNzUxNSAxMC4zNjggMy44Nzc1IDkuODI2QzMuOTg2IDkuMzYgNC41NzggNi44NTcgNC41NzggNi44NTdDNC41NzggNi44NTcgNC4zOTk1IDYuNDk5NSA0LjM5OTUgNS45N0M0LjM5OTUgNS4xNCA0Ljg4MDUgNC41MiA1LjQ4IDQuNTJDNS45OSA0LjUyIDYuMjM2IDQuOTAyNSA2LjIzNiA1LjM2MUM2LjIzNiA1Ljg3MzUgNS45MDk1IDYuNjM5NSA1Ljc0MSA3LjM1QzUuNjAwNSA3Ljk0NDUgNi4wMzk1IDguNDI5NSA2LjYyNTUgOC40Mjk1QzcuNjg3IDguNDI5NSA4LjUwMzUgNy4zMSA4LjUwMzUgNS42OTRDOC41MDM1IDQuMjYzNSA3LjQ3NTUgMy4yNjQgNi4wMDggMy4yNjRDNC4zMDkgMy4yNjQgMy4zMTE1IDQuNTM4NSAzLjMxMTUgNS44NTZDMy4zMTE1IDYuMzY5NSAzLjUwOSA2LjkxOTUgMy43NTYgNy4yMTlDMy44MDQ1IDcuMjc4NSAzLjgxMiA3LjMzIDMuNzk3NSA3LjM5MDVDMy43NTIgNy41Nzk1IDMuNjUxIDcuOTg1IDMuNjMxNSA4LjA2OEMzLjYwNSA4LjE3NyAzLjU0NSA4LjIwMDUgMy40MzE1IDguMTQ3NUMyLjY4NTUgNy44MDA1IDIuMjE5NSA2LjcxIDIuMjE5NSA1LjgzNEMyLjIxOTUgMy45NDk1IDMuNTg4IDIuMjE5NSA2LjE2NTUgMi4yMTk1QzguMjM3NSAyLjIxOTUgOS44NDggMy42OTYgOS44NDggNS42NjlDOS44NDggNy43Mjc1IDguNTUwNSA5LjM4NDUgNi43NDg1IDkuMzg0NUM2LjE0MyA5LjM4NDUgNS41NzQ1IDkuMDY5NSA1LjM3OTUgOC42OThDNS4zNzk1IDguNjk4IDUuMDggOS44MzkgNS4wMDc1IDEwLjExOEM0Ljg2NjUgMTAuNjYgNC40NzU1IDExLjM0NiA0LjIzMyAxMS43MzU1QzQuNzkyIDExLjkwNzUgNS4zODUgMTIgNiAxMkM5LjMxMzUgMTIgMTIgOS4zMTM1IDEyIDZDMTIgMi42ODY1IDkuMzEzNSAwIDYgMEMyLjY4NjUgMCAwIDIuNjg2NSAwIDZaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 4px 50% / 12px 12px no-repeat rgb(230, 0, 35) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: none !important; -webkit-font-smoothing: antialiased !important; top: -85.5px; left: 10px;">Save</span><span style="border-radius: 12px; width: 24px !important; height: 24px !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iMTEiIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuOCI+PC9jaXJjbGU+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUuMDgzNCA0LjU4MzMzSDEzLjMzMzRWNS43NDk5OUgxNS4wODM0QzE1LjcyNjggNS43NDk5OSAxNi4yNSA2LjI3MzI0IDE2LjI1IDYuOTE2NjZWOC42NjY2NkgxNy40MTY3VjYuOTE2NjZDMTcuNDE2NyA1LjYyOTgzIDE2LjM3MDIgNC41ODMzMyAxNS4wODM0IDQuNTgzMzNaTTE2LjI1IDE1LjA4MzNDMTYuMjUgMTUuNzI2NyAxNS43MjY4IDE2LjI1IDE1LjA4MzQgMTYuMjVIMTMuMzMzNFYxNy40MTY3SDE1LjA4MzRDMTYuMzcwMiAxNy40MTY3IDE3LjQxNjcgMTYuMzcwMiAxNy40MTY3IDE1LjA4MzNWMTMuMzMzM0gxNi4yNVYxNS4wODMzWk01Ljc1MDA0IDE1LjA4MzNWMTMuMzMzM0g0LjU4MzM3VjE1LjA4MzNDNC41ODMzNyAxNi4zNzAyIDUuNjI5ODcgMTcuNDE2NyA2LjkxNjcxIDE3LjQxNjdIOC42NjY3MVYxNi4yNUg2LjkxNjcxQzYuMjczMjkgMTYuMjUgNS43NTAwNCAxNS43MjY3IDUuNzUwMDQgMTUuMDgzM1pNNS43NTAwNCA2LjkxNjY2QzUuNzUwMDQgNi4yNzMyNCA2LjI3MzI5IDUuNzQ5OTkgNi45MTY3MSA1Ljc0OTk5SDguNjY2NzFWNC41ODMzM0g2LjkxNjcxQzUuNjI5ODcgNC41ODMzMyA0LjU4MzM3IDUuNjI5ODMgNC41ODMzNyA2LjkxNjY2VjguNjY2NjZINS43NTAwNFY2LjkxNjY2Wk05LjI1MDA0IDEwLjcwODNDOS4yNTAwNCA5LjkwNDQ5IDkuOTA0NTQgOS4yNDk5OSAxMC43MDg0IDkuMjQ5OTlDMTEuNTEyMiA5LjI0OTk5IDEyLjE2NjcgOS45MDQ0OSAxMi4xNjY3IDEwLjcwODNDMTIuMTY2NyAxMS41MTIyIDExLjUxMjIgMTIuMTY2NyAxMC43MDg0IDEyLjE2NjdDOS45MDQ1NCAxMi4xNjY3IDkuMjUwMDQgMTEuNTEyMiA5LjI1MDA0IDEwLjcwODNaTTEzLjYyNSAxNC41QzEzLjg0OSAxNC41IDE0LjA3MyAxNC40MTQ4IDE0LjI0NCAxNC4yNDM5QzE0LjU4NTIgMTMuOTAyMSAxNC41ODUyIDEzLjM0NzkgMTQuMjQ0IDEzLjAwNjFMMTMuMDcwMyAxMS44MzNDMTMuMjM0MiAxMS40OTA2IDEzLjMzMzQgMTEuMTEyNiAxMy4zMzM0IDEwLjcwODNDMTMuMzMzNCA5LjI2MTA4IDEyLjE1NTYgOC4wODMzMyAxMC43MDg0IDguMDgzMzNDOS4yNjExMiA4LjA4MzMzIDguMDgzMzcgOS4yNjEwOCA4LjA4MzM3IDEwLjcwODNDOC4wODMzNyAxMi4xNTU2IDkuMjYxMTIgMTMuMzMzMyAxMC43MDg0IDEzLjMzMzNDMTEuMTEyNiAxMy4zMzMzIDExLjQ5MDYgMTMuMjM0MiAxMS44MzMgMTMuMDcwMkwxMy4wMDYxIDE0LjI0MzlDMTMuMTc3IDE0LjQxNDggMTMuNDAxIDE0LjUgMTMuNjI1IDE0LjVaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 50% 50% / 24px 24px no-repeat rgba(0, 0, 0, 0.4) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: none !important; top: -85.5px; left: 1247px;"></span></body></html>
