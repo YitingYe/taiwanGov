@@ -23,7 +23,13 @@ body { font-family: Arial, Helvetica, sans-serif; line-height: 1.42857143; backg
 .nav>li>a { position: relative; display: block; padding: 10px; }/*--第1827行--*/
 .navbar-collapse.in {overflow-x: hidden;}/*--第1931行--*/
 .navbar-fixed-top { top: 50px; }/*--第1967行--*/
-.navbar-default { background-color: inherit; background: url(../img/navbar-default.png) repeat; border-color: transparent; }/*--第2075行--*/
+.navbar-default {
+  background-color: inherit;
+  background: url(../Taiwan.gov.tw_files/navbar-default.png) repeat;
+  border-color: transparent;
+}
+
+/*--第2075行--*/
 .navbar-default .navbar-nav>li>a { color: #FFF; }/*--第2083行--*/
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: #FF0; background-color: transparent; }/*--第2085行--*/
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { color: #CFF; background-color: transparent; min-height: 30px; }/*--第2087行--*/
